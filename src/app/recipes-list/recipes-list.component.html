@@ -1,11 +1,11 @@
-<div class="container">
+<app-menu></app-menu>
+<div >
   <h2>Ma liste de recettes</h2>
-
-
   <table class="table table-striped table-bordered ">
       <thead>
         <tr>
           <th>Nom de recette</th>
+          <th>Type</th>
           <th>Ingrédients clés</th>
           <th>N° de magazine</th>
           <th>N° de page</th>
@@ -15,6 +15,7 @@
       <tbody>
         <tr *ngFor="let recipe of recipes">
           <td>{{ recipe.name }}</td>
+          <td>{{ recipe.type }}</td>
           <td>{{ recipe.ingredient }}</td>
           <td>{{ recipe.magazine }}</td>
           <td>{{ recipe.page }} </td>
