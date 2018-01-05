@@ -1,5 +1,25 @@
-<h2>Ma liste de recettes</h2>
-<ul class="recipes">
-  <li *ngFor="let recipe of recipes">
-      {{ recipe.name }}
-</ul>
+<div class="container">
+  <h2>Ma liste de recettes</h2>
+
+
+  <table class="table table-striped table-bordered ">
+      <thead>
+        <tr>
+          <th>Nom de recette</th>
+          <th>Ingrédients clés</th>
+          <th>N° de magazine</th>
+          <th>N° de page</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let recipe of recipes">
+          <td>{{ recipe.name }}</td>
+          <td>{{ recipe.ingredient }}</td>
+          <td>{{ recipe.magazine }}</td>
+          <td>{{ recipe.page }} </td>
+          <td>Detail</td>
+        </tr>
+      </tbody>
+  </table>
+</div>
